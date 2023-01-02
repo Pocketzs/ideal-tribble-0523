@@ -1,0 +1,18 @@
+<h1>Studios Index Page</h1>
+
+
+<% @studios.each do |studio| %>
+  <section id=<%= "studio-#{studio.id}" %>>
+    <h3><%= studio.name %></h3>
+    <p>Location: <%= studio.location %></p>
+    <ul>
+      <% studio.movies.each do |movie| %>
+        <li>
+        Movie: <%= movie.title %> <br>
+        Year: <%= movie.creation_year %> <br>
+        Genre: <%= movie.genre %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
