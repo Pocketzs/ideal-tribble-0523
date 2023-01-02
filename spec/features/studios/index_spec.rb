@@ -22,6 +22,7 @@ RSpec.describe 'studio index page' do
         @movie_4 = @studio_2.movies.create(title: 'Shrek', creation_year: '2002', genre: 'animation, adventure, dark, gritty')
         visit '/studios'
       end
+      
       it 'Then I see all of the studios including name and location' do
         expect(page).to have_content(@studio_1.name)
         expect(page).to have_content(@studio_1.location)
